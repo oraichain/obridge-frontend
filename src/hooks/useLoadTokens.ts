@@ -3,7 +3,7 @@ import { StargateClient } from '@cosmjs/stargate';
 import { MulticallQueryClient } from '@oraichain/common-contracts-sdk';
 import { OraiswapTokenTypes } from '@oraichain/oraidex-contracts-sdk';
 import { btcTokens, cosmosTokens, evmTokens, oraichainTokens, tokenMap } from 'config/bridgeTokens';
-import { genAddressCosmos, getAddress, handleCheckWallet, getWalletByNetworkCosmosFromStorage } from 'helper';
+import { genAddressCosmos, getAddress, handleCheckWallet, getWalletByNetworkCosmosFromStorage, getUtxos } from 'helper';
 import flatten from 'lodash/flatten';
 import { updateAmounts } from 'reducer/token';
 import { ContractCallResults, Multicall } from '@oraichain/ethereum-multicall';
