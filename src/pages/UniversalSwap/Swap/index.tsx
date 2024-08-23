@@ -532,7 +532,6 @@ const SwapComponent: React.FC<{
       isImpactPrice &&
       simulateData?.displayAmount &&
       averageRatio?.displayAmount &&
-      useAlphaSmartRouter &&
       averageSimulateData?.displayAmount
     ) {
       const calculateImpactPrice = new BigDecimal(simulateData.displayAmount)
@@ -553,8 +552,8 @@ const SwapComponent: React.FC<{
   const generateRatioComp = () => {
     const getClassRatio = () => {
       let classRatio = '';
-      const classWarningImpactBiggerFive = waringImpactBiggerFive && 'ratio-five';
-      if (isPreviousSimulate) classRatio = waringImpactBiggerTen ? 'ratio-ten' : classWarningImpactBiggerFive;
+      if (waringImpactBiggerFive) classRatio = 'ratio-five';
+      if (waringImpactBiggerTen) classRatio = 'ratio-ten';
       return classRatio;
     };
 
@@ -729,6 +728,8 @@ const SwapComponent: React.FC<{
                 tokenFee={toTokenFee}
                 usdPrice={usdPriceShowTo}
                 loadingSimulate={isPreviousSimulate}
+                impactWarning={impactWarning}
+                aiRouteEnable={isAIRoute}
               />
             </div>
           </div>
