@@ -23,7 +23,7 @@ const Swap: React.FC = () => {
     <Content nonBackground>
       <div className={cx('swap-container')}>
         <div className={cx('swap-col', 'w40')}>
-          <SwapComponent fromTokenDenom={fromTokenDenom} toTokenDenom={toTokenDenom} setSwapTokens={setSwapTokens} />
+          {/* <SwapComponent fromTokenDenom={fromTokenDenom} toTokenDenom={toTokenDenom} setSwapTokens={setSwapTokens} /> */}
         </div>
       </div>
     </Content>
